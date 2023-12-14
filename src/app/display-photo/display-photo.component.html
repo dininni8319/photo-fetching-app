@@ -1,1 +1,10 @@
-<p>display-photo works!</p>
+
+<div class="container">
+  <h3>Display Photo</h3>
+  <div *ngIf="randomPhoto || defaultPhoto">
+  </div>
+  <img [src]="randomPhoto || defaultPhoto" alt="Photo" />
+  <!-- add the event if you have some issue with preventDefault-->
+  <button
+    (click)="onClick()">Display random photo</button>
+</div>
